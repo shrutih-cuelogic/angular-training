@@ -27,7 +27,8 @@ function RegistrationController($scope, $location, profileService) {
                 password: $scope.password,
                 confirm_password: $scope.confirm_password,
                 gender: $scope.gender,
-                address: $scope.address
+                address: $scope.address,
+                emp_img: $scope.emp_img
             }
             profileService.getEmp().push($scope.employees);
             console.log(profileService.getEmp());

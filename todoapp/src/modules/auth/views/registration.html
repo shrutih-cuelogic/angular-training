@@ -79,13 +79,15 @@
                                 </span>
                             </div>
                         </div>
-<!--                          <div class="form-group">
-                            <label for="profile_image" class="col-sm-3 log-control-label">Address </label>
+                        <div class="form-group">
+                            <label for="emp_img" class="col-sm-3 log-control-label">User image </label>
                             <div class="col-sm-9">
-                                <input ng-model="profile_image" type="textarea" id="profile_image" name="profile_image" class="form-control" autofocus="true" autocomplete="off" required style="height:100px;">
+                                <input ng-model="emp_img" type="emp_img" id="emp_img" name="emp_img" class="form-control" placeholder="Enter emp_img url" autofocus="true" autocomplete="off" required>
+                                <span ng-show="registerForm.emp_img.$dirty && registerForm.emp_img.$invalid"><br>
+                                <span class="alert alert-warning" ng-show="registerForm.emp_img.$error.required">User image is required.</span>
+                                </span>
                             </div>
                         </div>
-                         -->
                         <div class="form-group last">
                             <div class="col-sm-offset-3 col-sm-9">
                                 <button type="submit" class="btn btn-primary" ng-disabled="registerForm.$invalid">Register here</button>
