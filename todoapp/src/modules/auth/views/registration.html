@@ -1,0 +1,100 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-7">
+            <div class="panel panel-default" align="center">
+                <div class="panel-heading"> <strong class="">Registration</strong>
+                </div>
+                <div class="panel-body">
+                    <form name="registerForm" class="form-horizontal" novalidate ng-submit="registration()" class="form-horizontal" role="form">
+                        
+                        <div class="form-group">
+                            <label for="id" class="col-sm-3 log-control-label">ID </label>
+                            <div class="col-sm-9">
+                                <input ng-model="id" type="id" id="id" name="id" class="form-control" placeholder="Enter id" autofocus="true" autocomplete="off" required >
+                                <span ng-show="registerForm.id.$dirty && registerForm.id.$invalid"><br>
+                                <span class="alert alert-warning" ng-show="registerForm.id.$error.required">ID is required.</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="firstname" class="col-sm-3 log-control-label">First Name </label>
+                            <div class="col-sm-9">
+                                <input ng-model="firstname" type="firstname" id="firstname" name="firstname" class="form-control" placeholder="Enter firstname" autofocus="true" autocomplete="off" required>
+                                <span ng-show="registerForm.firstname.$dirty && registerForm.firstname.$invalid"><br>
+                                <span class="alert alert-warning" ng-show="registerForm.firstname.$error.required">First Name is required.</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastname" class="col-sm-3 log-control-label">Last Name </label>
+                            <div class="col-sm-9">
+                                <input ng-model="lastname" type="lastname" id="lastname" name="lastname" class="form-control" placeholder="Enter lastname" autofocus="true" autocomplete="off" required>
+                                <span ng-show="registerForm.lastname.$dirty && registerForm.lastname.$invalid"><br>
+                                <span class="alert alert-warning" ng-show="registerForm.lastname.$error.required">Last Name is required.</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="col-sm-3 log-control-label">Username </label>
+                            <div class="col-sm-9">
+                                <input ng-model="username" type="username" id="username" name="username" class="form-control" placeholder="Enter username" autofocus="true" autocomplete="off" required>
+                                <span ng-show="registerForm.username.$dirty && registerForm.username.$invalid"><br>
+                                <span class="alert alert-warning" ng-show="registerForm.username.$error.required"Username is required.</span>
+                                <span class="alert alert-warning" ng-show="registerForm.username.$error.username">Invalid Username address.</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-sm-3 log-control-label">Password </label>
+                            <div class="col-sm-9">
+                                <input ng-model="password" type="password" id="password" name="password" class="form-control" placeholder="Enter password" autofocus="true" autocomplete="off" required>
+                                <span ng-show="registerForm.password.$dirty && registerForm.password.$invalid"><br>
+                                <span class="alert alert-warning" ng-show="registerForm.password.$error.required">Password is required.</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="col-sm-3 log-control-label">Confirm Password </label>
+                            <div class="col-sm-9">
+                                <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Enter confirm password" ng-model="confirm_password" ng-change="checkPassword()" autofocus="true" autocomplete="off" required><br>
+                                <span class="alert alert-warning" ng-show="registerForm.confirm_password.$dirty && registerForm.confirm_password.$error.dontMatch">Passwords don't match!</span>
+
+                            </div>
+                        </div><br>
+                        <div class="form-group">
+                            <label for="password" class="col-sm-3 log-control-label">Gender</label>
+                            <div class="col-sm-9">
+                                <input type="radio" style="width: 30px;" ng-model="registerForm.gender", value="male"> Male
+                                <input type="radio" style="width: 30px;" ng-model="registerForm.gender", value="female"> Female
+                            </div>
+                        </div><br>    
+                        <div class="form-group">
+                            <label for="address" class="col-sm-3 log-control-label">Address </label>
+                            <div class="col-sm-9">
+                                <input ng-model="address" type="textarea" id="address" name="address" class="form-control" placeholder="Enter address" autofocus="true" autocomplete="off" required style="height:100px;">
+                                <span ng-show="registerForm.address.$dirty && registerForm.address.$invalid"><br>
+                                <span class="alert alert-warning" ng-show="registerForm.address.$error.required">Address is required.</span>
+                                </span>
+                            </div>
+                        </div>
+<!--                          <div class="form-group">
+                            <label for="profile_image" class="col-sm-3 log-control-label">Address </label>
+                            <div class="col-sm-9">
+                                <input ng-model="profile_image" type="textarea" id="profile_image" name="profile_image" class="form-control" autofocus="true" autocomplete="off" required style="height:100px;">
+                            </div>
+                        </div>
+                         -->
+                        <div class="form-group last">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <button type="submit" class="btn btn-primary" ng-disabled="registerForm.$invalid">Register here</button>
+                                <button type="reset" class="btn btn-primary" ng-enabled="registerForm.$invalid">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
