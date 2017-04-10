@@ -1,0 +1,23 @@
+{
+  "name": "app",
+  "version": "4.3.2",
+  "description": "Angular training app",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shrutih-cuelogic/angular-training.git"
+  },
+  "scripts": {
+    "start": "http-server -a localhost -p 8989 -c-1"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shrutih-cuelogic/angular-training/issues"
+  },
+  "homepage": "https://github.com/shrutih-cuelogic/angular-training#readme",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+
+}
